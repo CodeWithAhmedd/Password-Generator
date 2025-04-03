@@ -1,4 +1,3 @@
-
 function generatePassword() {
     let length = document.getElementById("length").value;
     let uppercase = document.getElementById("uppercase").checked;
@@ -28,3 +27,10 @@ function generatePassword() {
 
     password.value = generatedPassword;
 };
+function copyButton() {
+    let password = document.getElementById("password");
+    password.select();
+    password.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Password copied to clipboard!");
+}
